@@ -1,0 +1,149 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar class="ion-padding">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-icon name="menu-outline" slot="start"></ion-icon>
+    <ion-title>chat2</ion-title>
+    <ion-icon name="camera-outline" slot="end"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="tabs ion-padding">
+<ion-segment value="chats" (ionChange)="segmentChange($event)">
+  <!-- ionChange se chats ki chat status and calls per click se show nahi hogi. -->
+<ion-segment-button value="chats">
+  <ion-label>Chats</ion-label>
+</ion-segment-button>
+<ion-segment-button value="status">
+  <ion-label>Status</ion-label>
+</ion-segment-button>
+<ion-segment-button value="calls">
+  <ion-label>Calls</ion-label>
+</ion-segment-button>
+</ion-segment>
+</div>
+<div class="chat-list" *ngIf="activeTab == 'chats'">
+  <div class="recent-chats ion-padding">
+    <div class="heading">
+      <h1>Recent Chats</h1>
+      <ion-icon name="search-sharp"></ion-icon>
+    </div>
+    <div class="chats">
+      <ion-item lines="none" routerLink="/conversation-page">
+        <ion-avatar slot="start">
+          <img src="assets/images/2.jpg" alt="">
+        </ion-avatar>
+        <ion-label class="ion-text-nowrap">
+          <h2>Bella</h2>
+          <p>Typing...</p>
+        </ion-label>
+        <div class="info-div">
+          <p>2:13</p>
+        </div>
+      </ion-item>
+      <ion-item lines="none" routerLink="/conversation-page">
+        <ion-avatar slot="start">
+          <img src="assets/images/43.jpg" alt="">
+        </ion-avatar>
+        <ion-label class="ion-text-nowrap">
+          <h2>Mommy</h2>
+          <p>Don't forget use mask.</p>
+        </ion-label>
+        <div class="info-div">
+          <ion-badge>1</ion-badge>
+          <p>4:10</p>
+        </div>
+      </ion-item>
+      <ion-item lines="none" routerLink="/conversation-page">
+        <ion-avatar slot="start">
+          <img src="assets/images/41.jpg" alt="">
+        </ion-avatar>
+        <ion-label class="ion-text-nowrap">
+          <h2>Savi</h2>
+          <p>i m not wait for few minutes...</p>
+        </ion-label>
+        <div class="info-div">
+          <ion-badge name="checkmark-done-outline"></ion-badge>
+          <p>6:30</p>
+        </div>
+      </ion-item>
+      <ion-item lines="none" routerLink="/conversation-page">
+        <ion-avatar slot="start">
+          <img src="assets/images/40.jpg" alt="">
+        </ion-avatar>
+        <ion-label class="ion-text-nowrap">
+          <h2>Bee</h2>
+          <p>OK take care...</p>
+        </ion-label>
+        <div class="info-div">
+          <ion-badge>2</ion-badge>
+          <p>7:10</p>
+        </div>
+      </ion-item>
+    </div>
+  </div>
+  <div class="all-chats ion-padding">
+    <div class="heading">
+      <h1>All Chats</h1>
+    </div>
+    <div class="chats">
+      <ion-item lines="none" routerLink="/conversation-page">
+        <ion-avatar slot="start">
+          <img src="assets/images/2.jpg" alt="">
+        </ion-avatar>
+        <ion-label class="ion-text-nowrap">
+          <h2>Bella</h2>
+          <p>Typing...</p>
+        </ion-label>
+        <div class="info-div">
+          <p>2:13</p>
+        </div>
+      </ion-item>
+      <ion-item lines="none" routerLink="/conversation-page">
+        <ion-avatar slot="start">
+          <img src="assets/images/43.jpg" alt="">
+        </ion-avatar>
+        <ion-label class="ion-text-nowrap">
+          <h2>Mommy</h2>
+          <p>Don't forget use mask.</p>
+        </ion-label>
+        <div class="info-div">
+          <ion-badge>1</ion-badge>
+          <p>4:10</p>
+        </div>
+      </ion-item>
+      <ion-item lines="none" routerLink="/conversation-page">
+        <ion-avatar slot="start">
+          <img src="assets/images/41.jpg" alt="">
+        </ion-avatar>
+        <ion-label class="ion-text-nowrap">
+          <h2>Savi</h2>
+          <p>i m not wait for few minutes...</p>
+        </ion-label>
+        <div class="info-div">
+          <ion-badge name="checkmark-done-outline"></ion-badge>
+          <p>6:30</p>
+        </div>
+      </ion-item>
+      <ion-item lines="none" routerLink="/conversation-page">
+        <ion-avatar slot="start">
+          <img src="assets/images/40.jpg" alt="">
+        </ion-avatar>
+        <ion-label class="ion-text-nowrap">
+          <h2>Bee</h2>
+          <p>OK take care...</p>
+        </ion-label>
+        <div class="info-div">
+          <ion-badge>2</ion-badge>
+          <p>7:10</p>
+        </div>
+      </ion-item>
+    </div>
+  </div>
+</div>
+<ion-fab-button>
+  <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+</ion-fab-button>
+</ion-content>

@@ -1,17 +1,53 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>whatsapp</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+
+      <ion-button>
+        <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-segment [(ngModel)]='screen'>
+  <ion-segment-button value="chat">
+    CHAT
+  </ion-segment-button>
+  <ion-segment-button value="calls">
+    CALLS
+  </ion-segment-button>
+  <ion-segment-button value="status">
+    STATUS
+  </ion-segment-button>
+</ion-segment>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-list>
+  <ion-item button="" *ngFor="let i of [1,2,3,4,5,6,7,8,9,1,2,3,4,5]">
+    <ion-avatar slot="start">
+      <img src="assets/images/1.jpg" />
+    </ion-avatar>
+    <ion-label class="ion-text-wrap">
+      <p class="name">Savita Kumari</p>
+      <p class="msg">How are you doing?</p>
+    </ion-label>
+
+    <ion-label slot="end" class="ion-text-wrap ion-text-end">
+     <p class="time">08:59</p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="chatbox"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
 </ion-content>

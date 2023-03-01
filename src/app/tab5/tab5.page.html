@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>dark theme</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+ <div class="logo">
+  <img src="assets/images/2.jpg" alt="">
+ </div>
+
+ <div class="form">
+  <ion-item lines="none">
+    <ion-input [(ngModel)]="email" placeholder="Enter Email" type="email"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-input [(ngModel)]="password" placeholder="Enter Password" type="password"></ion-input>
+  </ion-item>
+
+  <ion-button color="danger" expand="block">Login</ion-button>
+ </div>
+
+ <ion-button fill="clear">New? Signup here</ion-button>
+ <h6>{{email}}</h6>
+ <h6>{{password}}</h6>
+</ion-content>
+
+

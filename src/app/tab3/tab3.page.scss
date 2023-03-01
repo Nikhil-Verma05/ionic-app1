@@ -1,0 +1,33 @@
+ion-toolbar{
+    --background: white;
+}
+
+ion-label{
+    font-size: 18px;
+    
+}
+
+ion-slide{
+    img{
+        width: 456px;
+        height: 180px;
+    }
+   
+}
+
+/* iOS places the subtitle above the title */
+
+
+  /* iOS places the subtitle above the title */
+.cards{
+    display: flex;
+    flex-flow: row-reverse;
+  }
+
+  ion-fab{
+    ion-label{
+        font-size: 14px;
+        // font-weight: bold;
+    }
+  }
+
